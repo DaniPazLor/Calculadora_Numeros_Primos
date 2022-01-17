@@ -6,48 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="293dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/encabezado"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="268dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginRight="54dp"
-        android:text="@string/texto_ejemplo"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="204dp"
-        android:layout_height="51dp"
-        android:autofillHints="@string/edit_text"
-        android:ems="10"
-        android:hint="Posicion"
-        android:inputType="textPersonName"
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="730dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtEncabezado"
+            android:layout_width="328dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/encabezado"
+            android:textColor="#259330"
+            android:textSize="24sp"
+            tools:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEnunciado"
+            android:layout_width="268dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginRight="54dp"
+            android:gravity="center"
+            android:text="@string/texto_ejemplo"
+            android:textColor="#288E16"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTxtPosicion"
+            android:layout_width="247dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:autofillHints="@string/edit_text"
+            android:ems="10"
+            android:hint="@string/posicion"
+            android:inputType="textPersonName"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/calcular"
+            app:backgroundTint="#FF5722"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="200dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:text="" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
